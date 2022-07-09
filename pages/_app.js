@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import ConfigContext from "../contexts/config";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ConfigContext>
+      <Component {...pageProps} />
+    </ConfigContext>
+  );
 }
 
-export default MyApp
+export default MyApp;
